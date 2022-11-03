@@ -1,0 +1,172 @@
+/* global styles 
+
+matcha green #576bb3
+---------------------------------*/
+
+/* Box Model fix: border-box fix */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body {
+    color: #343434;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cantarell', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+/* sets images to a set size */
+* img {
+    width: 300px;
+}
+a {
+    color: #FFE66D;
+}
+a:hover {
+    text-decoration: none;
+}
+h1{
+    font-size: 80px;
+    line-height: 1.3;
+}
+h2 {
+    margin: 0;
+    font-size: 30px;
+}
+h1, h2{
+    font-family: 'Courgette', cursive;
+    margin: 0;
+    font-weight: 400;
+
+}
+h3 {
+    margin-bottom: 0; /* removing space between some paragraphs*/
+}
+.item-details h3 + p {
+    font-style: italic;
+}
+.item-details h3 ~ p {
+    margin: 0;
+}
+.content-wrap {
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0 60px 0;
+}
+.divider > section{
+    border-bottom: 1px dashed #343434;
+    padding: 25px 0;
+}
+.divider > section:last-of-type {
+    border-style: none;
+    
+}
+/* profile
+---------------------------------*/
+header {
+    background: #576b33;
+    color: #F7FFF7;
+
+}
+/* projects
+---------------------------------*/
+.projects {
+    background: #F7FFF7;
+}
+.projects a {
+    color: #2f3061;
+}
+.projects .btn{
+    color: #F7FFF7;
+    background: #2f3061;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px; /* rounded corners of button */
+    display: inline-block;
+}
+
+.projects .btn:hover {
+    background: rgba(47.48,97,80);
+}
+
+/* has descendant selector 'img' */
+
+.project-item {
+    overflow: hidden;
+}
+
+.project-item h3 {
+    margin-top: 0;
+}
+/* work experience
+---------------------------------*/
+.work-experience {
+    background: #A1C6D7;
+}
+
+/* education
+---------------------------------*/
+.education {
+    color: white;
+    background-image: url(../images/utd.jpg);
+    background-size: cover;
+    background-position: top right;
+    padding-bottom: 100px;
+}
+.education p {
+    width: 60%;
+}
+
+/* contact info 
+---------------------------------*/
+footer {
+    background: #343434;
+    color: #F7FFF7;
+
+}
+.content-list {
+    list-style-type: none;
+    padding: 0;    
+}
+.content-list a {
+    padding: 15px;
+    display: inline-block;
+}
+
+
+/* MEDIA QUERIES*/
+@media screen and (min-width: 750px) {
+    header, footer {
+        text-align: center;
+    }
+    .project-item img {
+        float: left;
+        margin-right: 20px;
+    }
+    .job-item {
+        display:grid;
+        grid-template-columns: 2fr 3fr;
+        column-gap: 20px; /* gutter case*/
+    }
+    .content-list{
+        display: flex;
+        justify-content: center;
+
+    }
+    
+} /* float will only apply for when the viewports are 750px or larger*/
+
+@media screen and (max-width: 749px){
+    h1{
+        font-size: 80px;
+        line-height: 1.1;
+        margin-bottom: 20px;
+    }
+    .content-list{
+        padding: 5px;
+    }
+}
