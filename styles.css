@@ -112,7 +112,7 @@ header {
 ---------------------------------*/
 .education {
     color: white;
-    background-image: url(../images/utd.jpg);
+    background-image: url(utd.jpg);
     background-size: cover;
     background-position: top right;
     padding-bottom: 100px;
